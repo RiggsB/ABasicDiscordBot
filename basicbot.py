@@ -16,7 +16,7 @@ client = Bot(description="A basic Discord bot", command_prefix="bb$", pm_help = 
 #This is a magic eight ball
 @client.command(name='8ball',
 				description="Answers a yes/no question.",
-				brief="Answers from from the beyond.",
+				brief="Provides answers from the beyond.",
 				aliases=['eight_ball', 'eightball', '8-ball'],
 				pass_context=True)
 async def eight_ball(context):
@@ -111,7 +111,7 @@ async def bitcoin():
 	url = 'https://api.coindesk.com/v1/bpi/currentprice/BTC.json'
 	response = requests.get(url)
 	value = response.json()['bpi']['USD']['rate']
-	await client.say("The current price of Bitcoin in USD is: $" + value)
+	await client.say("The current value of Bitcoin in USD is: $" + value)
 
 ################################################################################################
 
